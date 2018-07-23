@@ -1,0 +1,153 @@
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+	</head>
+<body>
+	<doctype html="">
+		<title>css3实现魔方旋转练习</title>
+	<style>
+		body{
+			background: black;
+		}
+		.container{
+			width: 200px;
+			height: 200px;
+			margin: 200px auto;
+			transform-style:preserve-3d;
+			transform-orign:center center;
+			position: relative;
+			-webkit-animation-name:r3d;
+			-webkit-animation-duration:10s;
+			-webkit-animation-iteration-count:infinite;
+			-webkit-animation-timing-function:linear;
+		}
+		.container .item{
+			width: 100%;
+			height: 100%;
+			border: 1px solid lime;
+			text-align: center;
+			font-size: 100px;
+			line-height: 200px;
+			position: absolute;
+			-webkit-box-shadow:0 0 100px #feff22;
+		}
+		.itemA,.itemB,.itemC,.itemD,.itemE,.itemF{
+			background-color: blanchedalmond;
+			width: 20%;
+			height: 20%;
+			margin: 12px;
+			float:left;
+			border-radius: 50%;
+			-webkit-box-shadow:0 0 20px #ffb5e7 inset;
+		}
+		.container .item:nth-child(1){
+			transform-origin:right center;
+			transform:rotateY(-90deg);
+		}
+		.container .item:nth-child(2){
+			transform-origin:left center;
+			transform:rotateY(90deg);
+		}
+		.container .item:nth-child(3){
+			transform-origin:top center;
+			transform:rotateX(-90deg);
+		}
+		.container .item:nth-child(4){
+			transform-origin:bottom center;
+			transform:rotateX(90deg);
+		}
+		.container .item:nth-child(5){
+			transform:translateZ(-200px);
+		}
+		.container .item:nth-child(6){
+			transform:translateZ(-200px);
+		}
+		@-webkit-keyframes r3d{
+			0%{
+				transform:rotateX(200deg);
+			}
+			20%{
+				transform:rotateY(-300deg);
+			}
+			40%{
+				transform:rotateZ(300deg);
+			}
+			80%{
+				transform:rotateY(300deg);
+			}
+			100%{
+				transform:rotateX(200deg);
+			}
+		}
+	</style>
+		<div class="container">
+			<div class="item">
+				<div class="itemA"></div>
+				<div class="itemA"></div>
+				<div class="itemA"></div>
+				<div class="itemA"></div>
+				<div class="itemA"></div>
+				<div class="itemA"></div>
+				<div class="itemA"></div>
+				<div class="itemA"></div>
+				<div class="itemA"></div>
+			</div>
+			<div class="item">
+				<div class="itemB"></div>
+				<div class="itemB"></div>
+				<div class="itemB"></div>
+				<div class="itemB"></div>
+				<div class="itemB"></div>
+				<div class="itemB"></div>
+				<div class="itemB"></div>
+				<div class="itemB"></div>
+				<div class="itemB"></div>
+			</div>
+			<div class="item">
+				<div class="itemC"></div>
+				<div class="itemC"></div>
+				<div class="itemC"></div>
+				<div class="itemC"></div>
+				<div class="itemC"></div>
+				<div class="itemC"></div>
+				<div class="itemC"></div>
+				<div class="itemC"></div>
+				<div class="itemC"></div>
+			</div>
+			<div class="item">
+				<div class="itemD"></div>
+				<div class="itemD"></div>
+				<div class="itemD"></div>
+				<div class="itemD"></div>
+				<div class="itemD"></div>
+				<div class="itemD"></div>
+				<div class="itemD"></div>
+				<div class="itemD"></div>
+				<div class="itemD"></div>
+			</div>
+			<div class="item">
+				<div class="itemE"></div>
+				<div class="itemE"></div>
+				<div class="itemE"></div>
+				<div class="itemE"></div>
+				<div class="itemE"></div>
+				<div class="itemE"></div>
+				<div class="itemE"></div>
+				<div class="itemE"></div>
+				<div class="itemE"></div>
+			</div>
+			<div class="item">
+				<div class="itemF"></div>
+				<div class="itemF"></div>
+				<div class="itemF"></div>
+				<div class="itemF"></div>
+				<div class="itemF"></div>
+				<div class="itemF"></div>
+				<div class="itemF"></div>
+				<div class="itemF"></div>
+				<div class="itemF"></div>
+			</div>
+		</div>
+</doctype>
+</body>
+</html>
