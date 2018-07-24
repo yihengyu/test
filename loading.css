@@ -1,0 +1,336 @@
+body {
+    padding: 0;
+    margin: 0;
+    background-color: #000000;
+}
+
+.container {
+    width: 1280px;
+    height: 700px;
+    margin: 50px auto;
+    display: flex;
+    flex-direction: column;
+}
+
+.container .column {
+    height: 350px;
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.item {
+    width: 400px;
+    height: 300px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: #000;
+}
+
+/*单独的一个column 和 单独的 item*/
+.column:nth-child(1) .item:nth-child(1) {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.column:nth-child(1) .item:nth-child(1) span {
+    width: 50px;
+    height: 25px;
+    border: 1px solid #f18553;
+    background-color: #f18553;
+    box-shadow: 0 0 42px 15px #56E55B;
+    display: inline-block;
+    border-radius: 50px 50px 0 0;
+    transform-origin: bottom center;
+    -webkit-animation: first 1s linear infinite;
+}
+
+@-webkit-keyframes first {
+    0% {
+        transform: rotate(0deg);
+    }
+    50% {
+        transform: rotate(180deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+/*单独的二个column 和 单独的 item*/
+.column:nth-child(1) .item:nth-child(2) {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.column:nth-child(1) .item:nth-child(2) i {
+    width: 7px;
+    height: 90px;
+    border: 1px solid #77DAFA;
+    background-color: #40EE39;
+    display: inline-block;
+    margin-left: 14px;
+}
+
+.column:nth-child(1) .item:nth-child(2) i:nth-child(1){
+    -webkit-animation: second 1s linear infinite 0.05s;
+}
+
+.column:nth-child(1) .item:nth-child(2) i:nth-child(2){
+    -webkit-animation: second 1s linear infinite 0.15s;
+}
+
+.column:nth-child(1) .item:nth-child(2) i:nth-child(3){
+    -webkit-animation: second 1s linear infinite 0.2s;
+}
+
+.column:nth-child(1) .item:nth-child(2) i:nth-child(4){
+    -webkit-animation: second 1s linear infinite 0.25s;
+}
+
+.column:nth-child(1) .item:nth-child(2) i:nth-child(5){
+    -webkit-animation: second 1s linear infinite 0.3s;
+}
+
+.column:nth-child(1) .item:nth-child(2) i:nth-child(6){
+    -webkit-animation: second 1s linear infinite 0.35s;
+}
+
+.column:nth-child(1) .item:nth-child(2) i:nth-child(7){
+    -webkit-animation: second 1s linear infinite 0.45s;
+}
+
+.column:nth-child(1) .item:nth-child(2) i:nth-child(8){
+    -webkit-animation: second 1s linear infinite 0.5s;
+}
+
+.column:nth-child(1) .item:nth-child(2) i:nth-child(9){
+    -webkit-animation: second 1s linear infinite 0.55s;
+}
+
+.column:nth-child(1) .item:nth-child(2) i:nth-child(10){
+    -webkit-animation: second 1s linear infinite 0.6s;
+}
+
+@-webkit-keyframes second{
+    0%{
+        height: 90px;
+    }
+    50%{
+        height: 0px;
+    }
+    100%{
+        height: 90px;
+    }
+}
+
+/*单独的三个column 和 单独的 item*/
+.column:nth-child(1) .item:nth-child(3) {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.column:nth-child(1) .item:nth-child(3) i {
+    width: 45px;
+    height: 45px;
+    border: 1px solid #fff;
+    background-color: #fff;
+    display: inline-block;
+    border-radius: 50%;
+    position: relative;
+    margin-left: 20px;
+}
+
+.column:nth-child(1) .item:nth-child(3) i:nth-child(1){
+    -webkit-animation: three 2s linear infinite 0s;
+}
+
+.column:nth-child(1) .item:nth-child(3) i:nth-child(2){
+    -webkit-animation: three 2s linear infinite 0.15s;
+}
+
+.column:nth-child(1) .item:nth-child(3) i:nth-child(3){
+    -webkit-animation: three 2s linear infinite 0.35s;
+}
+
+.column:nth-child(1) .item:nth-child(3) i:nth-child(4){
+    -webkit-animation: three 2s linear infinite 0.55s;
+}
+
+.column:nth-child(1) .item:nth-child(3) i:nth-child(5){
+    -webkit-animation: three 2s linear infinite 0.75s;
+}
+
+.column:nth-child(1) .item:nth-child(3) i:nth-child(6){
+    -webkit-animation: three 2s linear infinite 0.95s;
+}
+
+
+@-webkit-keyframes three{
+    0%{
+        transform: scale(1);
+        opacity: 1;
+        margin-left: 20px;
+    }
+    50%{
+        transform: scale(0.2);
+        opacity: 0.3;
+        margin-left: -45px;
+    }
+    100%{
+        transform: scale(1);
+        opacity: 1;
+        margin-left: 20px;
+    }
+}
+
+/*单独的四个column 和 单独的 item*/
+.column:nth-child(2) .item:nth-child(1){
+    position: relative;
+}
+
+.column:nth-child(2) .item:nth-child(1) i{
+    display: block;
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    background-color: #fff;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    margin-left: -48px;
+    margin-top: -64px;
+}
+
+.column:nth-child(2) .item:nth-child(1) i:nth-child(1){
+    -webkit-animation:four 1s linear 0s infinite;
+}
+
+.column:nth-child(2) .item:nth-child(1) i:nth-child(2){
+    -webkit-animation:four 1s linear 0.2s infinite;
+}
+
+.column:nth-child(2) .item:nth-child(1) i:nth-child(3){
+    -webkit-animation:four 1s linear 0.4s infinite;
+}
+
+@-webkit-keyframes four {
+    0%{
+        transform:scale(0);
+        opacity: 0;
+    }
+    5%{
+        opacity: 1;
+    }
+    100%{
+        transform:scale(1);
+        opacity: 0;
+    }
+}
+
+/*单独的五个column 和 单独的 item*/
+@-webkit-keyframes loading-3{
+    0%{
+        left: 100px;
+        top: 0;
+    }
+    80%{
+        left: 0;
+        top: 0;
+    }
+    85%{
+        left: 0;
+        top: -20px;
+        width: 20px;
+        height: 20px;
+    }
+    90%{
+        width: 40px;
+        height: 20px;
+    }
+    95%{
+        left: 100px;
+        top: -20px;
+        width: 20px;
+        height: 20px;
+    }
+    100%{
+        left: 100px;
+        top: 0;
+    }
+}
+.loading-3{
+    position: relative;
+}
+.loading-3 i{
+    display: block;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background-color: #faf5e3;
+    margin-right: 10px;
+    position: absolute;
+    margin-left: 134px;
+    margin-top: 132px;
+}
+.loading-3 i:nth-child(1){
+    -webkit-animation:loading-3 2s linear 0s infinite;
+}
+.loading-3 i:nth-child(2){
+    -webkit-animation:loading-3 2s linear -0.4s infinite;
+}
+.loading-3 i:nth-child(3){
+    -webkit-animation:loading-3 2s linear -0.8s infinite;
+}
+.loading-3 i:nth-child(4){
+    -webkit-animation:loading-3 2s linear -1.2s infinite;
+}
+.loading-3 i:nth-child(5){
+    -webkit-animation:loading-3 2s linear -1.6s infinite;
+}
+
+/*------------------------------------*/
+@-webkit-keyframes loading-2{
+    0%{
+        transform:rotate(0deg) scale(1);
+    }
+    50%{
+        transform:rotate(180deg) scale(0.6);
+    }
+    100%{
+        transform:rotate(360deg) scale(1);
+    }
+}
+.loading-2{
+    position: relative;
+}
+.loading-2 i{
+    display: block;
+    border: 2px solid #fff;
+    border-color: transparent #fff;
+    border-radius: 50%;
+    position: absolute;
+    margin-left: 170px;
+    margin-top: 118px;
+}
+.loading-2 i:first-child{
+    width: 35px;
+    height: 35px;
+    top: 0;
+    left: 0;
+    -webkit-animation:loading-2 1s ease-in-out 0s infinite;
+}
+.loading-2 i:last-child{
+    width: 15px;
+    height: 15px;
+    top: 10px;
+    left: 10px;
+    -webkit-animation:loading-2 1s ease-in-out 0.5s infinite reverse;
+}
+
+
+
