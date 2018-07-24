@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html leng="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    
+    <title>Message</title>
+    <link rel="stylesheet" href="bootstrap.css">
+    <link rel="stylesheet" type="text/css" href="index.css">
+</head>
+<body class="" style="">
+	<div class="content">
+		<div class="content-row">
+			<div class="item">
+				Message.show({Msg: "这是一个showInfo", iconImg: 'info'});
+				<div class="test-btn">
+					<button id="showInfo">点我测试</button>
+				</div>
+			</div>
+			<div class="item">
+				Message.show({Msg: "这是一个showError", iconImg: 'error'});
+				<div class="test-btn">
+					<button id="showError">点我测试</button>
+				</div>
+			</div>
+			<div class="item">
+				Message.show({Msg: "这是一个showWarning", iconImg: 'warning'});
+				<div class="test-btn">
+					<button id="showWarning">点我测试</button>
+				</div>
+			</div>
+		</div>
+		<div class="content-row">
+			<div class="item">
+				Message.alert({Msg: "这是一个alertInfo", iconImg: 'info'});
+				<div class="test-btn">
+					<button id="alertInfo">点我测试</button>
+				</div>
+			</div>
+			<div class="item">
+				<div>Message.confirm({</div>
+	            <div>&nbsp;&nbsp;&nbsp;&nbsp;Msg: "确定删除吗？",</div>
+	            <div>&nbsp;&nbsp;&nbsp;&nbsp;okSkin: 'danger',</div>
+	            <div>&nbsp;&nbsp;&nbsp;&nbsp;iconImg: 'question',</div>
+	            <div>&nbsp;&nbsp;&nbsp;&nbsp;isModal: true</div>
+	        	<div>}).on(function (flag) {</div>
+	            <div>&nbsp;&nbsp;&nbsp;&nbsp;if (flag) {</div>
+	            <div>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Message.alert({Msg: "删除", iconImg: 'info'});</div>
+	            <div>&nbsp;&nbsp;&nbsp;&nbsp;}else{</div>
+	            <div>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Message.alert({Msg: "不删除", iconImg: 'info'});</div>
+	            <div>&nbsp;&nbsp;&nbsp;&nbsp;}</div>
+	        	<div>});</div>
+	        	<div class="test-btn">
+	        		<button id="confirmQuestion">点我测试</button>
+	        	</div>
+			</div>
+			<div class="item">
+				<div>Message.confirm({</div>
+	        	<div>&nbsp;&nbsp;&nbsp;&nbsp;title: "我是title",</div>
+	            <div>&nbsp;&nbsp;&nbsp;&nbsp;Msg: "我是Msg",</div>
+	            <div>&nbsp;&nbsp;&nbsp;&nbsp;okSkin: 'danger',</div>
+	            <div>&nbsp;&nbsp;&nbsp;&nbsp;iconImg: 'question',</div>
+	            <div>&nbsp;&nbsp;&nbsp;&nbsp;btnOk: "我是确定", </div>
+	            <div>&nbsp;&nbsp;&nbsp;&nbsp;btnCancel: "我是取消", </div>
+	            <div>&nbsp;&nbsp;&nbsp;&nbsp;isClose: false,</div>
+	            <div>&nbsp;&nbsp;&nbsp;&nbsp;isModal: true</div>
+	        	<div>}).on(function (flag) {</div>
+	            <div>&nbsp;&nbsp;&nbsp;&nbsp;if (flag) {</div>
+	            <div>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Message.alert({Msg:"亲，你选择了确定"});</div>
+	            <div>&nbsp;&nbsp;&nbsp;&nbsp;}</div>
+	        	<div>});</div>
+	        	<div class="test-btn">
+	        		<button id="showAllOptions">点我测试</button>
+	        	</div>
+			</div>
+		</div>
+	</div>
+
+<script src="jquery-1.11.2.min.js"></script>
+<script src="bootstrap.min.js"></script>
+<script src="message-2.0.0.js"></script>
+<script src="index.js"></script>
+
+<div id="messager-dialogue" class="modal fade" style="z-index: 10000; display: none;" aria-hidden="true"><div class="modal-dialog modal-sm"><div class="modal-content"><div class="modal-header"><button type="button" class="close messager-close" data-dismiss="modal"><span aria-hidden="true">×</span><span class="sr-only">Close</span></button><h5 class="modal-title"><i class="fa fa-exclamation-circle"></i> 提示</h5></div><div class="modal-body small"><div class="row"><div class="col-xs-2">
+	<img class="messagerIcon" style="width:30px;" src="warning.png"></div><div class="col-xs-10 messageText" style="word-break: break-all;line-height: 26px;color: #fff">这是一个showWarning</div></div></div><div class="modal-footer"><button type="button" class="btn btn-primary ok" data-dismiss="modal">确定</button><button type="button" class="btn btn-border cancel" data-dismiss="modal" style="display: none;">取消</button></div></div></div></div></body></html>
